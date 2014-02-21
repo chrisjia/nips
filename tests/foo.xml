@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process>
+	<image id="result">
+	    <command id="root" exec="convert" args="%content -compose atop %icon -geometry 200x200+100+500 -composite"/>
+	    <image id="icon">
+	        <command id="a0" exec="convert" args="-resize 100 -crop 200X200+0+0 -gravity center %icon"/>
+	    </image>
+	    <image id="content">
+	        <command id="b0" exec="convert" args="-crop 800X800+0+0 -gravity center %content"/>
+	    </image>
+	</image>
+	<resource>
+		<input id="content" value=""/>
+		<template>
+			<item id="icon" value="icon.png"/>
+		</template>
+	</resource>
+</process>

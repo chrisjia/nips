@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>test</title>
+</head>
+<body >
+	<form method="post" action="http://127.0.0.1:3000/api/send" enctype="multipart/form-data">
+		<span>1.composite:</span>
+		<input name="process" type="text" value="example/foo"/>
+		<input name="content" type="file"/>
+		<input id="submit" type="submit" value="提交" />
+	</form>
+	<hr>
+	<form method="post" action="http://127.0.0.1:3000/api/accept" enctype="multipart/form-data">
+		<span>2 accept:</span>
+		<input name="rid" type="text" value="rid"/>
+		<input name="addr" type="text" value="china.shanghai"/>
+		<input id="submit" type="submit" value="提交" />
+	</form>
+	<hr>
+	<form method="post" action="http://127.0.0.1:3000/api/jobs/get" enctype="multipart/form-data">
+		<span>3 jobs:</span>
+		<input name="status" type="text" value="1"/>
+		<input name="n" type="text" value="100"/>
+		<input id="submit" type="submit" value="提交" />
+	</form>
+	<hr>
+	<form method="post" action="http://127.0.0.1:3000/api/jobs/dl" enctype="multipart/form-data">
+		<span>4.1 download image:</span>
+		<input name="rid" type="text" value="rid"/>
+		<input id="submit" type="submit" value="提交" />
+	</form>
+	<hr>
+	<form method="post" action="http://127.0.0.1:3000/api/jobs/printed" enctype="multipart/form-data">
+		<span>4.2 printed:</span>
+		<input name="rid" type="text" value="rid"/>
+		<input id="submit" type="submit" value="提交" />
+	</form>
+	<hr>
+	<form method="post" action="http://127.0.0.1:3000/api/jobs/delived" enctype="multipart/form-data">
+		<span>5 delived:</span>
+		<input name="rid" type="text" value="rid"/>
+		<input id="submit" type="submit" value="提交" />
+	</form>
+	<hr>
+	<form method="post" action="http://127.0.0.1:3000/api/bills" enctype="multipart/form-data">
+		<span>6 bills:</span>
+		<input name="uid" type="text" value=""/>
+		<input id="submit" type="submit" value="提交" />
+	</form>
+	<hr>
+</body>
+</html>

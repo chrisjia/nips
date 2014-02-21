@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process>
+	<image id="out">
+	    <command id="root" exec="gm" args="composite %qr %content -gravity southeast -geometry +10+10 -density 300"/>
+	    <image id="content">
+	        <command id="b0" exec="gm" args="convert -resize 1200X1800! -density 300 -gravity center %content"/>
+	    </image>
+	</image>
+	<resource>
+		<input id="content" value=""/>
+		<input id="qr" value=""/>
+		<template>
+			<item id="icon" value="logo.png"/>
+		</template>
+	</resource>
+</process>

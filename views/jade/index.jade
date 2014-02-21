@@ -1,0 +1,25 @@
+doctype
+html
+	head
+		title print jobs
+		link(href='/bootstrap3/css/bootstrap.css', media='screen, projection', rel='stylesheet', type='text/css')
+		meta(name="viewport",content="width=device-width, initial-scale=1.0")
+		each src in scripts
+			script(src=src)
+	body
+		br
+		div.container
+			ul.nav.nav-tabs
+				li.active
+					a(href="#") print
+				li
+					a(href="#") bills
+			div.foo
+				each job in jobs
+					h2 uid: #{job.uid}
+					div To: #{job.recver.addr}
+					div path: #{job.image.path}
+					div postAt: #{moment(job.image.time).format("YYYY-MM-DD HH:mm")}
+					div geo: #{job.image.geo}
+					div process: #{job.image.process}
+					hr
